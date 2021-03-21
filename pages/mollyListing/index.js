@@ -1,6 +1,7 @@
 // sfc + tab
 // <Link href="/molly"> ==> molly/index.js
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../../styles/MollyListing.module.css'
 
 export const getStaticProps = async () => {
@@ -24,11 +25,11 @@ const MollyListing = ({ mollys }) => {
       <div>
         <h1>All Mollys</h1>
         {mollys.map(user => (
-          <div className={styles.single} key={user.id}>
-            <a>
+          <Link href={'/mollyListing/' + user.id} key={user.id}>
+            <a className={styles.single}>
               <h3>{user.name}</h3>
             </a>
-          </div>
+          </Link>
         ))}
       </div>
     </>
