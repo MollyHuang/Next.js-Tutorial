@@ -1,4 +1,5 @@
 // <Link href="/molly"> ==> molly/index.js
+import styles from '../../styles/MollyListing.module.css'
 
 const MollyListing = () => {
   return (
