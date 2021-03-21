@@ -10,12 +10,12 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      mollys: data
+      users: data
     }
   }
 }
 
-const MollyListing = ({ mollys }) => {
+const MollyListing = ({ users }) => {
   return (
     <>
       <Head>
@@ -24,7 +24,7 @@ const MollyListing = ({ mollys }) => {
       </Head >
       <div>
         <h1>All Mollys</h1>
-        {mollys.map(user => (
+        {users.map(user => (
           <Link href={'/mollyListing/' + user.id} key={user.id}>
             <a className={styles.single}>
               <h3>{user.name}</h3>
